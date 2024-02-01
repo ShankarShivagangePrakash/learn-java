@@ -1,7 +1,7 @@
-public class StaticMethods {
+public class A3_StaticMethods {
     public static void main(String[] args) {
         System.out.println("Insise public static void main()");
-        StaticMethods.staticMethod1();
+        A3_StaticMethods.staticMethod1();
     }
 
     static void staticMethod1() {

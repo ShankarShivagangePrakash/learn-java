@@ -1,4 +1,4 @@
-public class StaticBlock {
+public class A2_StaticBlock {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
