@@ -1,5 +1,7 @@
 package packages.p1;
 
+import packages.p1.subpackage.E;
+
 public class B {
     public static void main(String[] args) {
 
@@ -8,5 +10,8 @@ public class B {
 
         A obj = new A();
         obj.a2();
+
+        E e = new E();//even for classes inside the subpackage, you need to import it.
+        e.e1();
     }
 }
