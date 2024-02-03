@@ -9,4 +9,8 @@ public class MacBookPro extends MacBook {
     void shutdown() {
         System.out.println("MacBook Pro shut down");
     }
+
+    void specialFeature() {
+        System.out.println("MacBook Pro special feature");
+    }
 }
