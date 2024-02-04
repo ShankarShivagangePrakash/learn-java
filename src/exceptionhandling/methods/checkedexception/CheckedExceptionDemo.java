@@ -24,7 +24,7 @@ public class CheckedExceptionDemo {
             // add throws exceptionName to method signature, JVM will throw that exception if occurs.
             checkedExceptionDemo.readFile();
         } catch (FileNotFoundException e) {
-            System.out.println("File not found exception");
+            throw new RuntimeException("File not found exception", e);
         }
     }
 }
