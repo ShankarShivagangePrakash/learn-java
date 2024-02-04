@@ -16,6 +16,11 @@ public class TryCatch {
         } catch (NumberFormatException e) {
             System.out.println("enter number properly");
         }
+        //Finally block executes even if try block fails to execute completely, () and when try block successfully executes.
+        // It is usually used to free the resources, like jdbc connection or some hardware connection.
+        finally {
+            System.out.println("Executing finally block");
+        }
 
         try {
             // if b is 0, division fails and programs stops with an exception. Arithmetic exception
