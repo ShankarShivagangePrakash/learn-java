@@ -26,5 +26,10 @@ public class ThreadGroupDemo {
         ThreadGroup thread1 = new ThreadGroup(childThreadGroup, "thread-1");
         ThreadGroup thread2 = new ThreadGroup(childThreadGroup, "thread-2");
         System.out.println("thread -1 priority: " + thread1.getMaxPriority());
+
+        //This method will give the number of active threads, it need not return 2 in this case if threads have finished execution output will be zero
+        System.out.println(childThreadGroup.activeCount());
+
+        childThreadGroup.list();
     }
 }
