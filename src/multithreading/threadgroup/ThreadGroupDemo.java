@@ -21,5 +21,10 @@ public class ThreadGroupDemo {
         ThreadGroup childThreadGroup = new ThreadGroup(parentThreadGroup, "Child");
         System.out.println("Created " + childThreadGroup.getName() + " as a child thread group of " + childThreadGroup.getParent().getName() + " thread group");
 
+        //Let's assign priority to thread group so it will apply to all threads created under this group after setting group level priority
+        childThreadGroup.setMaxPriority(4);
+        ThreadGroup thread1 = new ThreadGroup(childThreadGroup, "thread-1");
+        ThreadGroup thread2 = new ThreadGroup(childThreadGroup, "thread-2");
+        System.out.println("thread -1 priority: " + thread1.getMaxPriority());
     }
 }
