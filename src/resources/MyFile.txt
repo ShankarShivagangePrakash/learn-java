@@ -1,1 +1,3 @@
 Welcome to Java IO Streams !!!
+All the power is within you,
+You can do everything and anything.
