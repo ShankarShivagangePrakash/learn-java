@@ -20,6 +20,11 @@ public class ArraysDemo {
             System.out.println(arr2[i]);
         }
 
+        // enhanced for loop
+        for (int num : arr2) {
+            System.out.println(num);
+        }
+
         // below line will give runtime error as we're trying to access index beyond array size.
         // arr2[6] = 70;
     }
