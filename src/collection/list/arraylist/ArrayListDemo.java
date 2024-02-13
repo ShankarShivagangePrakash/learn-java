@@ -1,6 +1,7 @@
 package collection.list.arraylist;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListDemo {
 
@@ -18,6 +19,18 @@ public class ArrayListDemo {
         arrayList.add(10);
 
         System.out.println("ArrayList: " + arrayList);
+
+        //create iterator and attach to a collection object you want to iterate.
+        Iterator<Integer> iterator = arrayList.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            // print and remove elements from collection.
+            iterator.remove();
+        }
+
+        //contents of collection after removing all elements from iterator.
+        System.out.println("Array list contents: " + arrayList);
 
     }
 }

@@ -27,5 +27,17 @@ public class SetTypes {
         // elements are order in ascending order.
         Set<Integer> treeSet = new TreeSet<>(hashSet);
         System.out.println("Tree Hash Set contents: " + treeSet);
+
+        //create iterator and attach to a collection object you want to iterate.
+        Iterator<Integer> iterator = treeSet.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            // print and remove elements from collection.
+            iterator.remove();
+        }
+
+        //contents of collection after removing all elements from iterator.
+        System.out.println("Tree set contents: " + treeSet);
     }
 }
