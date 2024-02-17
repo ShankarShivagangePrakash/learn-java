@@ -9,5 +9,11 @@ public class EnumsTest {
         for (EnumsExample enumExample : values) {
             System.out.println(enumExample);
         }
+
+        System.out.println("Credit card processing fee: " + PaymentTypes.CREDIT_CARD.getFee());
+
+        for (PaymentTypes paymentTypes : PaymentTypes.values()) {
+            System.out.println(paymentTypes +  " processing fee: " + paymentTypes.getFee());
+        }
     }
 }
