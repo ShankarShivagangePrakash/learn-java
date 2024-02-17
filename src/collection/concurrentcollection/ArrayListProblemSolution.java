@@ -4,12 +4,22 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ArrayListProblemSolution {
+public class ArrayListProblemSolution extends Thread{
 
-    public static void main(String[] args) {
+    static CopyOnWriteArrayList<String> courses = new CopyOnWriteArrayList<>();
 
-        CopyOnWriteArrayList<String> courses = new CopyOnWriteArrayList<>();
+    @Override
+    public void run() {
+        courses.add("AWS");
+    }
 
+    public static void main(String[] args) throws InterruptedException {
+
+        //spin of a new thread by creating object of the class and invoke start method which creates thread and invokes run()
+        ArrayListProblemSolution arrayListProblemSolution = new ArrayListProblemSolution();
+        arrayListProblemSolution.start();
+
+        // In main thread below operation executes
         courses.add("Java");
         courses.add("Python");
         courses.add("c++");
@@ -25,6 +35,8 @@ public class ArrayListProblemSolution {
             }
         }
 
+        // waiting for 5 seconds for java to sync the copy list to original list
+        Thread.sleep(5000);
         System.out.println("Courses list: " + courses);
     }
 }
