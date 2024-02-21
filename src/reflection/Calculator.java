@@ -1,5 +1,6 @@
 package reflection;
 
+@MyAnnotation(value1 = "123", value2 = "456")
 public class Calculator {
 
     private double num1;

@@ -1,5 +1,6 @@
 package reflection;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -103,6 +104,13 @@ public class Test {
             System.out.println("\nNew values of the variables");
             System.out.println("\nnum1: " + getNum1.invoke(parameterizedObject, null));
 
+            // get annotation
+            Annotation[] annotations = myClass.getAnnotations();
+            System.out.println("\nAnnotations of Calculator class: " + Arrays.asList(annotations));
+
+            MyAnnotation myAnnotation = (MyAnnotation) annotations[0];
+            System.out.println("\nAnnotation value1: " + myAnnotation.value1());
+            System.out.println("Annotation value2: " + myAnnotation.value2());
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         } catch (NoSuchMethodException e) {
