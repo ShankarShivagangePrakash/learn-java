@@ -1,8 +1,5 @@
 package collection.set.sortobjects;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 /* here you are implementing comparable because Wrapper classes by default implement comparable to define default behaviour
  and implement Comparator interface if you need to define new behaviour.
  but for user defined class you need to implement Comparable interface to define sorting behaviour*/
