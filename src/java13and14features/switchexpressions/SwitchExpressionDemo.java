@@ -27,5 +27,24 @@ public class SwitchExpressionDemo {
         System.out.println("Switch with case output for input 1: " + switchWithCaseResponse);
 
 
+        // Switch with arrow function of switch lambda
+        int input2 = 1;
+
+        String response = switch (input2) {
+
+            // yield is not required if it is one line of code.
+            case 1-> "You have zero balance";
+
+            case 2-> "You can get a loan";
+
+            case 3->{
+                yield "Are you sure, you have money?";
+            }
+            default -> {
+                yield "Invalid input";
+            }
+        };
+
+        System.out.println("Switch with Lambda expression output: " + response);
     }
 }
